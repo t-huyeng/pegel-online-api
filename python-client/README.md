@@ -73,9 +73,9 @@ with pegel_online.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = measurement_api.MeasurementApi(api_client)
     station = "593647aa-9fea-43ec-a7d6-6476a76ae868" # str | UUID / Name / Pegelnummer der Station.
-timeseries = "" # str | timeseries shortname
-start = "2022-02-06T09:00:00+01:00" # str | Zeitpunkt codiert im [ISO_8601](https://de.wikipedia.org/wiki/ISO_8601) Format. Angabe eines Datums oder einer Period (_P_, z.B. \"P8D\" für die Messwerte der letzten 8 Tage) sind möglich. (optional)
-end = "" # str | Endzeitpunkt codiert im [ISO_8601](https://de.wikipedia.org/wiki/ISO_8601) Format. Kann auch leer gelassen werden, dann wird automatisch der aktuelle Zeitstempel verwendet. (optional)
+    timeseries = "" # str | timeseries shortname
+    start = "2022-02-06T09:00:00+01:00" # str | Zeitpunkt codiert im [ISO_8601](https://de.wikipedia.org/wiki/ISO_8601) Format. Angabe eines Datums oder einer Period (_P_, z.B. \"P8D\" für die Messwerte der letzten 8 Tage) sind möglich. (optional)
+    end = "" # str | Endzeitpunkt codiert im [ISO_8601](https://de.wikipedia.org/wiki/ISO_8601) Format. Kann auch leer gelassen werden, dann wird automatisch der aktuelle Zeitstempel verwendet. (optional)
 
     try:
         # Zugriff auf die Ressource Measurement
