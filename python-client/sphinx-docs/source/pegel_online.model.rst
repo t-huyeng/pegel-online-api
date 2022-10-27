@@ -28,6 +28,14 @@ pegel\_online.model.measurement\_result module
    :undoc-members:
    :show-inheritance:
 
+pegel\_online.model.station module
+----------------------------------
+
+.. automodule:: pegel_online.model.station
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pegel\_online.model.station\_overview\_result module
 ----------------------------------------------------
 
@@ -44,10 +52,10 @@ pegel\_online.model.timeseries module
    :undoc-members:
    :show-inheritance:
 
-pegel\_online.model.timeseries\_gauge\_zero module
---------------------------------------------------
+pegel\_online.model.timeseries\_not\_found module
+-------------------------------------------------
 
-.. automodule:: pegel_online.model.timeseries_gauge_zero
+.. automodule:: pegel_online.model.timeseries_not_found
    :members:
    :undoc-members:
    :show-inheritance:
