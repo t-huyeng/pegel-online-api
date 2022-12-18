@@ -47,7 +47,7 @@ paths:
         - station
       responses:
         "200":
-          description: OK
+          description: "Liste der Stationen"
           content:
             application/json:
               schema:
@@ -83,6 +83,7 @@ paths:
           description: "Filter nach Stationen, möglich sind der Pegelname, Pegelnummer oder die UUID"
         - $ref: "#/components/parameters/timeseriesQuery"
         - in: query
+          description: "Suchbegriff, der z.B. im Name des Pegels enhalten ist."
           required: false
           name: fuzzyId
           schema:
@@ -132,7 +133,7 @@ paths:
         - station
       responses:
         "200":
-          description: OK
+          description: Stationsparameter
           content:
             application/json:
               schema:
@@ -154,13 +155,13 @@ paths:
         - measurement
       responses:
         "200":
-          description: OK
+          description: Measurement
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/MeasurementResult"
         "404":
-          description: OK
+          description: Timeseries not found
           content:
             application/json:
               schema:
@@ -182,14 +183,14 @@ paths:
         - measurement
       responses:
         "200":
-          description: OK
+          description: Measurement Image
           content:
             image/png:
               schema:
                 type: string
                 format: binary
         "404":
-          description: OK
+          description: Timeseries not found
           content:
             application/json:
               schema:
@@ -231,7 +232,7 @@ paths:
         - water
       responses:
         "200":
-          description: OK
+          description: Gewässer
           content:
             application/json:
               schema:
@@ -272,13 +273,13 @@ paths:
         - water
       responses:
         "200":
-          description: OK
+          description: Timeseries
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Timeseries"
         "404":
-          description: OK
+          description: Timeseries not found
           content:
             application/json:
               schema:
@@ -410,6 +411,7 @@ components:
       description: "Bessere Lesbarkeit der Response durch Aufteilen in mehreren Zeilen. Für den produktiven Einsatz wird `false` empfohlen."
       example: false
     limit:
+      description: "Limit der Anzahl der Rückgabe."
       name: limit
       in: query
       required: false
@@ -417,6 +419,7 @@ components:
         type: number
         format: integer
     offset:
+      description: "Offset der Rückgabe."
       name: offset
       in: query
       required: false
